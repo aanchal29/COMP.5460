@@ -1,0 +1,1 @@
+I confirm that this assignment is my work. I used multiple online websites (Stack Overflow and W3 schools) for syntax and error correction. I learnt the implementating the Mid point aldo with bresenham from youtube. Ex: https://www.youtube.com/watch?v=QeOvZTYlmAI; https://www.youtube.com/watch?v=Z9xTvqMGDQI; https://www.youtube.com/watch?v=wBuyO65YKA8 

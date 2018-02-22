@@ -1,0 +1,200 @@
+ <style>
+ #mainDivRubberbanding {
+    height: 500px;
+    width: 700px;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color: teal;
+  }
+ #canvasRubberbanding {
+    width:100%;
+    height:100%;
+    border: solid 1px;
+  }
+  #clearButton {
+  background-color: orange;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 80%;
+  }
+  #mainDiv {
+    height: 500px;
+    width: 700px;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color: teal;
+  }
+  #canvas {
+    width:100%;
+    height:100%;
+    border: 1px dashed white;
+  }
+  #clearButton {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 80%;
+  }
+  body {
+    background-size: cover;
+    background: gray;
+  }
+  .rectangle {
+    border: 5px solid orange;
+    position: absolute;
+  }
+
+  #something {
+    border: solid 1px;
+    height: 400px;
+    width: 400px;
+  }
+
+  #polygonStyling {
+    border: solid 1px;
+    height: 400px;
+    width: 500px;
+    background-color: teal;
+    text-align: center;
+  }
+
+  #polygonInput {
+    margin-left: 0px;
+  }
+
+  #submitButton {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+ .clearButton2 {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  #polygonParagraph {
+  font-size: 20px
+}
+
+.dropbtn {
+    background-color:   #4000ff;
+    color: skyblue;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+box-shadow: 6px 6px 5px;
+border-radius: 10px; 
+  
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: solid;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.buttons:hover, draw:hover{
+background-color:#0080ff;
+}
+.draw{
+    height: 80px;
+    background-color: orange;
+}
+.draw1{background-color: #cc1228;}
+
+.buttons {
+width: 150px; 
+padding: 10px; 
+cursor: pointer; 
+box-shadow: 2px 2px 3px #999;
+-webkit-box-shadow: 6px 6px 5px #999; 
+-moz-box-shadow: 6px 6px 5px #999; 
+font-weight: bold; 
+background: #00bfff; 
+color:white; 
+border-radius: 10px; 
+border: 1px solid #999; 
+font-size: 100%; 
+margin-right: 20px;
+}
+
+.text{
+margin: 5px;
+width:70px;
+}
+
+.input_text{
+width:300px;
+color: black;
+}
+
+a{
+font-color:white;
+}
+
+   #SelectPolyline{
+        font-size:18px;
+    } 
+    #canvasPolyline {
+      background-color: teal;
+    }  
+
+  </style>

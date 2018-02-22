@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <h1>Rectangle</h1>
+    <body>
+        <style>
+        body{
+            background-color: gray;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #mainDivMidpoint {
+            height: 400px;
+            width: 500px;
+            background-color: teal;
+            border: solid 1px;
+        }
+
+        
+        </style>
+        <div id="mainDivMidpoint">
+        <canvas width="400" height="400"  id="Rectangle";></canvas>
+        </div>
+
+        <br>
+        <form class="input_text">
+            Side A <input type="text" id="x1"; value= "50" class="text"/> 
+            Side B <input type="text" id="y1"; value= "50" class="text"> 
+            <br>
+            Side C <input type="text" id="x2"; value= "50" class="text">
+            Side D <input type="text" id="y2"; value= "50" class="text">
+         </form>
+        
+        <input type="submit" value="Draw" id="submitButton" class="text" onclick="draw()" />
+        <input type="submit" value="Clear" id="submitButton" class="text" onclick="clearCanvas()" />
+
+        <script>
+            var canvas = document.getElementById('Rectangle');
+            var context = canvas.getContext('2d');    //creating object for stroke
+
+            function clearCanvas() {
+                location.reload();
+            }
+                
+            function draw(){
+                var x1 = document.getElementById("x1").value;
+                var x2 = document.getElementById("x2").value;
+                var y1 = document.getElementById("y1").value;
+                var y2 = document.getElementById("y2").value;
+                    
+                context.strokeStyle="yellow"; //Styling
+                context.lineWidth=3;
+                context.rect(x1,x2,y1,y2);
+                context.fillStyle = "darkblue";
+                context.fill();
+                context.stroke(); //closing stroke
+                
+                var gradient=context.createLinearGradient(x1,x2,y1,y2);
+                gradient.addColorStop("0","magenta");
+                gradient.addColorStop("0.5","blue");
+                gradient.addColorStop("1.0","red");
+            }
+                
+        </script>
+            
+    </body>
+    </html>
+         
+        
+        
+        

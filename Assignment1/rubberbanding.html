@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  #mainDivRubberbanding {
+  	height: 500px;
+  	width: 700px;
+  	background-color: teal;
+  }
+ 
+	body {
+    background-size: cover;
+	}
+
+  </style>
+</head>
+
+<body>
+<h1>Rubber Banding</h1>
+<div id="mainDivRubberbanding">
+  <div id="canvasRubberbanding"></div>
+  
+  <script src="initdraw.js"></script>
+  <script>
+  initDraw(document.getElementById('canvasRubberbanding')); 
+  
+  function clearbox(){
+    document.getElementById('canvasRubberbanding').innerHTML = "";
+	}
+  </script>
+  
+<br>
+<input type="button" onclick="clearbox();" value="clear" id="submitButton" class="text"/>
+</div>
+</body>
+
+
+</html>
