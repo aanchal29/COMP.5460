@@ -1,0 +1,208 @@
+<html>
+<head>
+    <title>Computer Graphics Assignment</title>
+    <!--JQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="selector1.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("Score").value;
+          var r = document.getElementById("Radius").value;
+          
+          if(x  == 100){
+            drawCircle(r);
+          }
+          else if(x>=80 && x<=99){
+            drawEllipse(r, x);
+          }
+          else if(x>=4 && x<=79){
+            drawPolygon(x, r);
+          }
+          else{
+            invalidEntry();
+          }
+        }
+      
+        function drawCircle(r) {
+          circleRadius = r;
+          var radiusOfInnerCircleMost = r/3;
+          var radiusOfInnerCircle = 2 * (r/3);
+          var radiusOfSmallCircle = (r/12);
+          var x = 250;
+          var y = 150;
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+          ctx.clearRect (0, 0, 500, 300);
+          ctx.strokeStyle = "green";
+          ctx.beginPath();
+          ctx.arc(x, y, circleRadius, 0, 2 * Math.PI); //arc(x,y,r,startangle,endangle) To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI
+          ctx.stroke();
+          ctx.strokeStyle = "green";
+          ctx.beginPath();
+          ctx.arc(x, y, radiusOfInnerCircleMost, 0, 2 * Math.PI);
+          ctx.stroke();
+          ctx.strokeStyle = "green";
+          ctx.beginPath();
+          ctx.arc(x, y, radiusOfInnerCircle, 0, 2 * Math.PI);
+          ctx.stroke();
+          ctx.strokeStyle = "green";
+       
+          ctx.beginPath();
+          x = x - radiusOfInnerCircleMost;
+          y = y - radiusOfInnerCircleMost;
+          ctx.arc(x, y, radiusOfSmallCircle, 0, 2 * Math.PI);
+          ctx.stroke();
+
+          ctx.beginPath();
+          x = x + (6 * radiusOfSmallCircle);
+          y = y - radiusOfSmallCircle;
+          ctx.arc(x, y, radiusOfSmallCircle, 0, 2 * Math.PI);
+          ctx.stroke();
+
+          ctx.beginPath();
+          x = x - radiusOfInnerCircleMost;
+          y = y + (10 * radiusOfSmallCircle);
+          ctx.arc(x, y, radiusOfSmallCircle, 0, 2 * Math.PI);
+          ctx.stroke();
+
+          ctx.beginPath();
+          x = x + radiusOfInnerCircleMost;
+          ctx.arc(x, y, radiusOfSmallCircle, 0, 2 * Math.PI);
+          ctx.stroke();
+
+          ctx.strokeStyle = "green";
+         
+        }
+      
+        function drawEllipse(r, x){
+          radiusX = r;
+          currentScore = x;
+        
+          totalScore = 100;
+          dif = totalScore - currentScore;
+          difPercent = dif;
+          radiusY = Number(radiusX) + Number(difPercent);
+          var radiusOfInnerX = r - difPercent;
+          var radiusOfInnerY = radiusOfInnerX + difPercent;
+          var radiusOfInnerMostX = r - difPercent - radiusOfInnerX;
+          var radiusOfInnerMostY = radiusOfInnerMostX + difPercent;
+      
+          var canvas = document.getElementById('myCanvas');
+          var ctx = canvas.getContext('2d');
+          ctx.clearRect (0, 0, 500, 300);
+          ctx.beginPath();
+          ctx.ellipse(250, 150, radiusY, radiusX, 0 * Math.PI/180, 0, 2 * Math.PI); //ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
+          ctx.strokeStyle = "green";
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.ellipse(250, 150, radiusOfInnerY, radiusOfInnerX, 0 * Math.PI/180, 0, 2 * Math.PI); //ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(250, 150, radiusX / 3 , 0, 2 * Math.PI);
+          ctx.stroke();
+          ctx.strokeStyle = "green";
+          ctx.stroke();
+        }
+      
+        function drawPolygon(x, radius) {
+          var c = document.getElementById('myCanvas');
+          c.width = c.width;
+          var cxt = c.getContext("2d");
+          cxt.clearRect (0, 0, 500, 300);
+          var numberOfSides = x;
+                  size = 80,
+                  Xcenter = c.width/2,
+                  Ycenter = c.height/2;
+
+          if(radius > 25) {
+            alert('Radius should be less than 25 for better experience');
+            radius = 25;
+          }
+
+          cxt.strokeStyle = "green";        
+          cxt.beginPath();
+          cxt.moveTo (Xcenter +  size * Math.cos(0), Ycenter +  size *  Math.sin(0));
+          for (var i = 1; i <= numberOfSides;i += 1) {
+            cxt.lineTo (Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
+          }
+          cxt.stroke();
+
+          cxt.beginPath();
+          size = 40,
+
+          innerXcenter = (Xcenter );
+          innerYcenter = (Ycenter);
+          cxt.moveTo (innerXcenter +  size * Math.cos(0), innerYcenter +  size *  Math.sin(0));
+          for (var j = 1; j <= numberOfSides; j += 1) {
+            cxt.lineTo (innerXcenter + size * Math.cos(j * 2 * Math.PI / numberOfSides), innerYcenter + size * Math.sin(j * 2 * Math.PI / numberOfSides));
+          }
+          cxt.stroke();
+          cxt.beginPath();
+          cxt.arc(innerXcenter, innerYcenter, radius, 0, 2 * Math.PI);
+          cxt.stroke();
+        }
+      
+      
+        function invalidEntry() {
+          var canvas = document.getElementById("myCanvas");
+          var ctx = canvas.getContext("2d");
+          ctx.clearRect (0, 0, 500, 300);
+          ctx.font = "20px Arial";
+          ctx.fillText("Please enter the SCORE between 4 and 100!",10,50);
+        }
+      
+    </script>
+    <style type="text/css"> </style>
+    <!--Bootstrap CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="titlebg">
+        <center>
+            <h1>Programming Assignment </h1>
+            <nav>
+                <div class="container brackets">
+                    <a></a>
+                    <a href="http://www.cs.uml.edu/~asharma/427546s2018/prog-hws/1/">Assignment 1</a>
+                    <a href="q1.html">Assignment 2 - Q1</a>
+                    <a href="q1_extra_snowFlake.html">Assignment 2 - Q1 Extra</a>
+                    <a href="index.html"> Assignment 2 - Q2</a>
+                </div>             
+            </nav>
+        </center>
+    </div>
+    
+    <h2 align="center">Change Website Theme</h2>
+    <select name="" id="list">
+        <option value="#ffffff">White</option>
+        <option value="#80D1E5">Sky Blue</option>
+        <option value="#F191B1">Pink</option>
+        <option value="#E4E1DF">Gray</option>
+        <option value="#fa8d42">Orange</option>
+        <option value="#FBE574">Light Yellow</option>
+    </select>
+    
+    <br><br>
+    
+    <hr>
+    
+    <div class="form">
+        Score: <input type="number" name="Score" id="Score" min="0" max="100">
+        Radius: <input type="number" name="Radius" id="Radius">
+        <button onclick="myFunction()">Submit</button>
+        <input type="button" value="Reset" onClick="window.location.reload()">
+    </div>
+
+    <br><br>
+    <canvas id="myCanvas" width="500" height="300" style="border:2px solid #0be94e;"> Your browser does not support the HTML5 canvas tag.</canvas>
+    <br><br>
+    
+    
+    <footer>
+            Aanchal Sharma | Aanchal_Sharma@student.uml.edu
+    </footer>
+    
+</body>
+</html>
