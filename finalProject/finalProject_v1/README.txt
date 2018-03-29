@@ -1,4 +1,4 @@
-For now, I’ve added only the front view of my dream house.
+For now, I’ve added only the front and rear view of my dream house.
 
 For Javascript, I used the jQuery library. And for CSS styling, I used some bootstrap. With jQuery helped me to change the website color and also helped to merge multiple mouse events and functions with ease.
 
