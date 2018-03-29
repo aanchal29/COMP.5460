@@ -1,0 +1,109 @@
+body{ 
+    margin: 0;
+}
+font{
+    font-family: courier;
+    font-size: 14px;
+}
+h1{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    font-family: courier;
+}
+
+/* Nav menu CSS */
+div.container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 2em 2em;
+	text-align: center;
+    color: #FFFFFF;
+}
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/* Brackets go out */
+div.brackets a:before, div.brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 35px;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+div.brackets a:before
+{
+    content: '(';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+div.brackets a:after
+{
+    content: ')';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+div.brackets a:hover:before, div.brackets a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+h2{
+    padding-left: 20px;
+    font-family: courier;
+}
+#list{
+    margin-left: 600px;
+}
+p{
+    margin-left: 20px;
+    font-family: serif;
+    font-size: 16px;
+}
+.footerbg{
+    background-color: #000000;
+    width: 100%
+}
+.titlebg{
+    background-color: #000000;
+    width: 100%;
+}
+.form {
+    margin-left: 400px;
+}
+footer{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-family: courier;
+    color: #ffffff;
+    background-color: #000000;
+    height: 100px;
+    width: 100%;
+    display: block;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+
+#myCanvas {
+    margin-left: 400px;
+}
