@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" media="all" href="css/styles.css" />
+<!--Bootstrap CDN-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery320min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<!--JQuery CDN-->
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/selector1.js"></script>
+
+</head>
+<body>
+  <center>
+  <div class="titlebg">
+    <center>
+      <h1> Computer Graphics I </h1>
+      <nav>
+        <div class="container brackets">
+           <a></a>
+            <a href="http://www.cs.uml.edu/~asharma/427546s2018/prog-hws/1/">Assignment 1</a>
+            <a href="http://www.cs.uml.edu/~asharma/427546s2018/prog-hws/2/Assignment2/index.html">Assignment 2</a>
+            <a href="2dTransformations.html">2D Transformations</a>
+            <a href="projections.html"> Projections</a>
+        </div>             
+      </nav>
+    </center>
+  </div>
+  <br>
+  <div align="center"><b>Change Website Theme -></b>
+  <select name="" id="list">
+    <option value="">Originl</option>
+    <option value="#808080">Gray</option>
+    <option value="#BCD4E6">Beau Blue</option>
+    <option value="#F364A2">Pink</option>
+    <option value="#FFE4C4">Bisque</option>
+    <option value="#0088DC">Blue cola</option>
+  </select></div>
+    
+  <br>
+  <div class="outer">
+  <table>
+
+    <tr><td><br>Parallel Geometric Projections </td></tr>
+
+<tr>
+<td align="center">
+  <div class="inner table1">
+      <svg width="400" height="400" id="top2" ><!--Multiview Orthographic -->
+        <polyline points="60,180 160,180 160,80 60,80 60,180" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2"/>
+        <polyline points="60,220 160,220 160,320 60,320 60,220" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2"/>
+        <polyline points="200,180 300,180 300,80 200,80 200,180" style="fill:rgb(163, 201, 221);stroke:black;stroke-width:2"/>
+        </svg>
+        <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">Multiview Orthographic</text>
+      <br>
+    </div>
+  </td>
+
+  <td align="center">
+  <div class="inner table1">
+      <svg width="400" height="400" id="top2" ><!--Oblique Projection (30 - 65) -->
+        <polyline points="50,200 150,200 150,100 50,100 50,200" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2"/>
+        <polyline points="150,200 160,183 160,83 150,100 150,200" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2"/>
+        <polyline points="50,100 150,100 160,83 60,83 50,100" style="fill:rgb(163, 201, 221);stroke:black;stroke-width:2"/>
+        <line x1="60" y1="83" x2="60" y2="183" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+        <line x1="160" y1="183" x2="60" y2="183" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+        <line x1="50" y1="200" x2="60" y2="183" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+      </svg>
+      <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">Oblique Projection (30 - 65)</text>
+      <br>
+    </div>
+  </td>
+
+  <td align="center">
+  <div class="inner table1">
+      <svg width="400" height="400" id="top2" ><!--Oblique Projection (45) -->
+        <polyline points="50,200 150,200 150,100 50,100 50,200" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2"/>
+        <polyline points="150,200 185,165 185,65 150,100 150,200" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2"/>
+        <polyline points="50,100 150,100 185,65 85,65 50,100" style="fill:rgb(163, 201, 221);stroke:black;stroke-width:2"/>
+        <line x1="85" y1="65" x2="85" y2="165" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+        <line x1="185" y1="165" x2="85" y2="165" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+        <line x1="50" y1="200" x2="85" y2="165" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+      </svg>
+      <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">Oblique Projection (45)</text>
+      <br>
+    </div>
+  </td>
+</tr>
+    
+<tr> <td><br>Axonometric Projections</td> </tr>
+
+<tr>
+  <td align="center">
+  <div class="inner table1">
+      <svg width="200" height="400" id="top2" ><!--Isometric -->
+        <polyline points="100,300 100,200 14,150 14,250 100,300" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2"/>
+        <polyline points="100,300 100,200 186,150 186,250 100,300" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2"/>
+        <polyline points="100,200 14,150 100,101 186,150 100,200" style="fill:rgb(163, 201, 221);stroke:black;stroke-width:2"/>
+        <line x1="100" y1="101" x2="100" y2="201" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+        <line x1="100" y1="201" x2="14" y2="250" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+        <line x1="100" y1="201" x2="186" y2="250" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+      </svg>
+      <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">Isometric</text>
+      <br>
+    </div>
+  </td>
+
+  <td align="center">
+  <div class="inner table1">
+    <svg width="200" height="400" id="top2" ><!--Diometric -->
+      <polyline points="100,300 100,200 7,166 7,266 100,300" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2"/>
+      <polyline points="100,300 100,200 193,166 193,266 100,300" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2"/>
+      <polyline points="100,200 7,166 100,133 193,166 100,200" style="fill:rgb(163, 201, 221);stroke:black;stroke-width:2"/>
+      <line x1="100" y1="133" x2="100" y2="233" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+      <line x1="100" y1="233" x2="193" y2="266" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+      <line x1="100" y1="233" x2="7" y2="266" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+    </svg>
+      <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">Dimetric</text>
+      <br>
+    </div>
+  </td>
+
+  <td align="center">
+  <div class="inner table1">
+    <svg width="200" height="400" id="top2" ><!--Trimetric -->
+      <polyline points="100,300 100,200 7,166 7,266 100,300" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2"/>
+      <polyline points="100,300 100,200 158,132 158,232 100,300" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2"/>
+      <polyline points="100,200 7,166 64,97 158,132 100,200" style="fill:rgb(163, 201, 221);stroke:black;stroke-width:2"/>
+      <line x1="64" y1="97" x2="64" y2="197" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+      <line x1="64" y1="197" x2="7" y2="266" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+      <line x1="64" y1="197" x2="158" y2="232" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+    </svg>
+    <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">Trimetric</text>
+    <br>
+  </div>
+</td>
+</tr>
+
+<tr> <td> <br>Perspective Geometric Projections</td></tr>
+
+    <tr>
+      <td align="center">
+        <div class="inner table1">
+          <svg width='200' height='300' id="top1"><!--1 Point -->
+          <polyline points="50,200 150,200 150,100 50,100 50,200" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2" />
+          <line x1="60" y1="190" x2="140" y2="190" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+          <line x1="140" y1="190" x2="140" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+          <line x1="140" y1="110" x2="60" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+          <line x1="60" y1="110" x2="60" y2="190" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+          <line x1="60" y1="190" x2="50" y2="200" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+          <line x1="140" y1="190" x2="150" y2="200" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+          <line x1="150" y1="100" x2="140" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+          <line x1="50" y1="100" x2="60" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+        </svg>
+        <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">1 Point</text>
+        <br>
+      </div>
+    </td>
+
+    <td align="center">
+      <div class="inner table1">
+        <svg width='200' height='300' id="top2"><!--2 Point -->
+          <polyline points="100,200 100,100 30,105 30,195 100,200" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2" />
+          <polyline points="100,200 100,100 170,105 170,195 100,200" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2" />
+       </svg>
+       <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">2 Point</text>
+       <br>
+     </div>
+   </td>
+
+   <td align="center"> 
+    <div class="inner table1">
+      <svg width='200' height='300' id="top2"><!--3 Point -->
+
+        <polyline points="90,200 13,156 105,114 181,157 90,200" style="fill:rgb(163, 201, 221);stroke:black;stroke-width:2" />  
+        <polyline points="100,300 90,200 181,157 182,243 100,300" style="fill:rgb(255, 179, 102);stroke:black;stroke-width:2" />
+        <polyline points="100,300 90,200 13,156 24,236 100,300" style="fill:rgb(255, 153, 153);stroke:black;stroke-width:2" />
+      </svg>
+        <text width='40' height='40' x='170' y='290' style="font-weight:bold;text-transform:uppercase">3 Point</text>
+      <br>
+    </div>
+  </td>
+</tr>
+
+<tr> <td><br><br></td> </tr>
+</table>
+
+</div>
+</center>
+
+</body>
+
+<footer> Aanchal Sharma | Aanchal_Sharma@student.uml.edu </footer>
+
+</html>

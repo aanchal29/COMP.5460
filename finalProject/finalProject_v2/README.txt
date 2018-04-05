@@ -1,0 +1,5 @@
+I added the top view of my dream house and the various projections of a cube. 2dTransformations.html deals with all the 2 Dimensional Transformations of dream house and Projections.html has the various Geometric Projections of cube.
+
+For Javascript, I used the jQuery library. And for CSS styling, I used some bootstrap. With jQuery helped me to change the website color and also helped to merge multiple mouse events and functions with ease.
+
+I have svgs in html for the front view of my dream house, rear view of my dream house, top view of my dream house and Geometric Projections of cube. I have some global parameters to perform translation, rotation, scaling, and shearing. Everytime the function is called, it uses to jqery and the css function is used to display the effects. I also have a reset option. 
