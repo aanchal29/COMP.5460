@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<title>3D Transformation with Mouse</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="CHANGE-ME">
+	<meta name="description" content="CHANGE-ME">
+
+	<!-- Mobile Stuff -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-tap-highlight" content="no">
+  	<title>3D Transformation</title>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<!--Bootstrap CDN-->
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+ 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="js/selector1.js"></script>
+
+	<style>
+		body {
+			cursor: crosshair;
+		}
+		
+		#perspektywa {
+			width: 100%;
+			height: 700px;
+			position: relative;
+			-webkit-perspective: 800px;
+			perspective: 800px;
+		}
+		
+		.zielony {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: rgb(255, 179, 102);
+			left: 20%;
+			top: 20%;
+			-webkit-transition: .1s;
+			transition: .1s;
+		}
+		
+		.czerwony {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: blueviolet;
+			left: 20%;
+			top: 20%;
+			-webkit-transition: .1s;
+			transition: .1s;
+			-webkit-transform: translateX(50px) translateZ(-50px) rotateY(90deg);
+			transform: translateX(50px) translateZ(-50px) rotateY(90deg);
+		}
+		
+		.niebieski {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: rgb(163, 201, 221);
+			left: 20%;
+			top: 20%;
+			-webkit-transition: .1s;
+			transition: .1s;
+			-webkit-transform: translateX(-50px) translateZ(-50px) rotateY(-90deg);
+			transform: translateX(-50px) translateZ(-50px) rotateY(-90deg);
+		}
+		
+		.czarny {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: salmon;
+			left: 20%;
+			top: 20%;
+			-webkit-transition: .1s;
+			transition: .1s;
+			-webkit-transform: translateY(-50px) translateZ(-50px) rotateX(90deg);
+			transform: translateY(-50px) translateZ(-50px) rotateX(90deg);
+		}
+		
+		.brazowy {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: rgb(255, 153, 153);
+			left: 20%;
+			top: 20%;
+			-webkit-transition: .1s;
+			transition: .1s;
+			-webkit-transform: translateZ(-100px);
+			transform: translateZ(-100px);
+		}
+		
+		.pomaranczowy {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: cadetblue;
+			left: 20%;
+			top: 20%;
+			-webkit-transition: .1s;
+			transition: .1s;
+			-webkit-transform: translateY(50px) translateZ(-50px) rotateX(90deg);
+			transform: translateY(50px) translateZ(-50px) rotateX(90deg);
+		}
+		
+		#kwadrat {
+			position: absolute;
+			top: 200px;
+			left: 200px;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+		}
+		
+		#kwadrat * {
+			position: absolute;
+      		border: 2px solid #000;
+      		opacity: .85;
+      		background-size: auto 100%;
+      		
+		}
+		
+		#obsluga {
+			border-right: 1px dotted black;
+			border-bottom: 1px dotted black;
+			display: inline-block;
+		}
+		
+		.prawy,
+		.lewy {
+			background-image: url("dach.jpg");
+			width: 100px;
+			position: absolute;
+			height: 100px;
+		}
+		
+		.prawy {
+			-webkit-transform: translateY(-100px) translateX(50px) rotateX(90deg) translateY(-50px) translateZ(-50px) rotateY(60deg) translateX(-50px);
+			transform: translateY(-100px) translateX(50px) rotateX(90deg) translateY(-50px) translateZ(-50px) rotateY(60deg) translateX(-50px);
+		}
+		
+		.lewy {
+			-webkit-transform: translateY(-100px) translateX(-50px) rotateX(90deg) translateY(-50px) translateZ(-50px) rotateY(-60deg) translateX(50px);
+			transform: translateY(-100px) translateX(-50px) rotateX(90deg) translateY(-50px) translateZ(-50px) rotateY(-60deg) translateX(50px);
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="titlebg">
+    <center>
+      <h1>3D Transformation of Cube with Mouse</h1> 
+      <div class="container brackets">
+           <a></a>
+            <a href="index.html">Back To Main Page</a>  
+        </div>             
+    </center>
+  </div>
+  <br>
+
+  <div id="obsluga">
+  	<table border="1px">
+  		<tr>
+  			<td>
+  				<label for="ustalanie">Change the center of perspective </label>
+  				<input id="ustalanie" value="0" type="range" min="0" max="600" step="50">
+				<br>
+				<p>Current distance from the intersection of the axis: <span id="oddalenie">0px</span></p>
+				<label for="wielkosc">Change the distance from the monitor:
+					<br>
+					<span>Zoom out</span>
+					<input id="wielkosc" type="range" min="0.1" max="2.3" step="0.1"><span>Zoom in</span>
+				</label>
+  			</td>
+  		</tr>
+  	</table>
+</div>
+	
+	<div id="perspektywa">
+		<div id="kwadrat">
+			<div class="zielony"></div>
+			<div class="czerwony"></div>
+			<div class="niebieski"></div>
+			<div class="czarny"></div>
+			<div class="brazowy"></div>
+			<div class="pomaranczowy"></div>
+			<div class="prawy"></div>
+			<div class="lewy"></div>
+		</div>
+	</div>
+
+	<script>
+		var kontener = document.getElementById("perspektywa");
+		var pozycjax = document.getElementById("x");
+		var pozycjay = document.getElementById("y");
+		var kwadrat = document.getElementById("kwadrat");
+		var ustalone = document.getElementById("ustalanie").value;
+		var perspektywa = document.getElementById("perspektywa");
+
+
+		function pokaz(e) {
+			var ustalone = document.getElementById("ustalanie").value,
+				wielkosc = document.getElementById("wielkosc").value,
+				x = e.clientX,
+				y = e.clientY;
+			kwadrat.style.left = x + "px";
+			kwadrat.style.top = y + "px";
+			kwadrat.style.transform = "rotateY(" + x + "deg)" + " rotateX(" + y + "deg) " + "translateZ(" + ustalone + "px) " + "scale3D(" + wielkosc + "," + wielkosc + "," + wielkosc + ")";
+
+		}
+
+		function os() {
+			var ustalone = document.getElementById("ustalanie").value;
+
+			var oddalenie = document.getElementById("oddalenie");
+			oddalenie.innerHTML = ustalone + "px";
+		}
+
+
+
+
+		document.getElementById("ustalanie").addEventListener("change", os);
+
+		kontener.addEventListener('mousemove', pokaz);
+	</script>
+
+</body>
+
+</html>
