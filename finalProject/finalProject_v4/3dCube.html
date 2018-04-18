@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>3D Transformation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<!--Bootstrap CDN-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/selector1.js"></script>
+  <style>
+    .colo{
+      height: 100%
+      width: 100%;
+      min-height: 100%
+      background: #73C8A9;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #fafafa, #20405F);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #fafafa, #20405F);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera fafafa2+, Safari 7+ */
+      text-shadow: 0px 0px 1px lightgray;
+    }
+    .main {
+      padding-top: 100px;
+      padding-left: 500px;
+      -webkit-perspective: 1000px;
+      width: 250px;
+      height: 250px;
+      text-align: center;
+      display: inline-block;
+    }
+    
+    .cont {
+      text-align: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: rotateX(-15deg) rotateY(15deg);
+      -webkit-animation: rotateCube 6s infinite linear;
+    }
+    
+    .cube {
+      position: absolute;
+      border: 1px solid #000;
+      opacity: .85;
+      background-size: auto 100%;
+    }
+    
+    .cube-front {
+      width: 250px;
+      height: 250px;
+      -webkit-transform: translate3d(0, 0, 125px);
+      background-color: rgb(255, 179, 102);
+    }
+    
+    .cube-back {
+      width: 250px;
+      height: 250px;
+      -webkit-transform: rotateY(180deg) translate3d(0, 0, 125px);
+      background-color: blueviolet;
+    }
+    
+    .cube-top {
+      width: 250px;
+      height: 250px;
+      -webkit-transform: rotateX(90deg) translate3d(0, 0, 125px);
+      background-color: rgb(163, 201, 221);
+    }
+    
+    .cube-bottom {
+      width: 250px;
+      height: 250px;
+      -webkit-transform: rotateX(-90deg) translate3d(0, 0, 125px);
+      background-color: salmon;
+    }
+    
+    .cube-left {
+      width: 250px;
+      height: 250px;
+      -webkit-transform: rotateY(-90deg) translate3d(0, 0, 125px);
+      background-color: rgb(255, 153, 153);
+    }
+    
+    .cube-right {
+      width: 250px;
+      height: 250px;
+      -webkit-transform: rotateY(90deg) translate3d(0, 0, 125px);
+      background-color: cadetblue;
+    }
+    
+    @-webkit-keyframes rotateCube {
+      0% {
+        -webkit-transform: rotateY(0deg) rotateX(0deg);
+      }
+      100% {
+        -webkit-transform: rotateY(-360deg) rotateX(-360deg);
+      }
+    }
+    
+  </style>
+
+
+</head>
+
+
+<body>
+  <div class="titlebg">
+    <center>
+      <h1>3D Transformation Of Cube</h1> 
+      <div class="container brackets">
+           <a></a>
+            <a href="index.html">Back To Main Page</a>  
+        </div>             
+    </center>
+  </div>
+  <br>
+  
+  <div class="main">
+    <div class="cont">
+      <div class="cube cube-front">
+        <svg viewBox="0 0 500 500" enable-background="new 0 0 500 500"></svg>
+      </div>
+
+      <div class="cube cube-back">
+        <svg viewBox="0 0 500 500" enable-background="new 0 0 500 500"></svg>
+      </div>
+
+      <div class="cube cube-top">
+        <svg viewBox="0 0 500 500" enable-background="new 0 0 500 500"></svg>
+      </div>
+
+      <div class="cube cube-bottom">
+        <svg viewBox="0 0 500 500" enable-background="new 0 0 500 500"></svg>
+      </div>
+
+      <div class="cube cube-left">
+        <svg viewBox="0 0 500 500" enable-background="new 0 0 500 500"></svg>
+      </div>
+
+      <div class="cube cube-right">
+        <svg viewBox="0 0 500 500" enable-background="new 0 0 500 500"></svg>
+      </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3D Floating House View</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<!--Bootstrap CDN-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/selector1.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-color: #73C8A9;
+            overflow: hidden;
+        }
+        
+        .main {
+            padding-top: 100px;
+            padding-left: 300px;
+            width: 250px;
+            height: 250px;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .cont {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transform: rotateX(-15deg) rotateY(15deg);
+            -webkit-animation: rotateCube 7s infinite linear;
+        }
+        
+        .cube {
+            position: absolute;
+            opacity: .85;
+            background-size: auto 100%;
+        }
+        
+        .cube-front {
+            width: 300px;
+            height: 300px;
+            -webkit-transform: translate3d(0, 0, 125px);
+        }
+        
+        @-webkit-keyframes rotateCube {
+            0% {
+                -webkit-transform: rotateY(0deg) rotateX(0deg);
+            }
+            100% {
+                -webkit-transform: rotateY(-360deg) rotateX(-360deg);
+            }
+        }
+        
+        header,
+        footer {
+            padding: 1em;
+            color: white;
+            background-color: black;
+            clear: left;
+            text-align: center;
+        }
+        
+        .main:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        
+        * html .main {
+            height: 1%;
+        }
+        
+        .main {
+            display: block;
+        }
+        
+        .fLeft {
+            float: left;
+        }
+        
+        .fRight {
+            float: right;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+
+<body>
+  <div class="titlebg">
+    <center>
+      <h1>3D Floating House View </h1> 
+      <div class="container brackets">
+           <a></a>
+            <a href="index.html">Back To Main Page</a>  
+        </div>             
+    </center>
+  </div>
+  <br>
+  
+
+    <div class="main" style="float:center; width:50%;">
+        <div class="cont">
+            <div class="cube cube-front">
+                <svg width="500" height="300" viewbox="0 0 600 530">
+                    <path d="M300 500 L150 400 L150 200 L300 300 Z" style="fill:salmon;stroke:blue;stroke-width:2;opacity:5"/>
+	
+   
+   <path d="M300 500 L550 400 L550 200 L300 300 Z" style="fill:rgb(255, 179, 102);stroke:blue;stroke-width:2;opacity:5"/>
+   
+   <path d="M300 300 L150 200 L250 150 L500 50 L550 200 Z" style="fill:rgb(163, 201, 221);stroke:blue;stroke-width:2;opacity:5"/>
+   
+   <line x1="250" y1="150" x2="300" y2="300" style="stroke:blue;stroke-width:2; opacity:5" />
+   
+
+   
+   
+   
+   <path d="M200 290 L170 270 L170 240 L200 260 Z" style="fill:salmon;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:5"/>
+   <path d="M250 290 L280 310 L280 340 L250 320 Z" style="fill:blue;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:5"/>
+<path d="M470 290 L470 260 L500 245 L500 275 Z" style="fill:blue;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:5"/>
+   <path d="M350 310 L380 295 L380 325 L350 340 Z" style="fill:red;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:5"/>
+   
+   <circle cx="185" cy="265" r="10" stroke="black" stroke-width="2" fill="blue" />
+						<circle cx="186" cy="267" r="4" stroke="black" stroke-width="4" fill="black" />
+				   
+						<circle cx="265" cy="315" r="10" stroke="black" stroke-width="2" fill="blue" />
+						<circle cx="266" cy="317" r="4" stroke="black" stroke-width="4" fill="black" />
+						
+						
+		<path d="M 185 338 C 170 400, 200 435, 220 355" stroke-width="2" stroke="blue" fill="transparent"/>
+<line x1="185" y1="340" x2="221" y2="355" style="stroke:blue;stroke-width:2" />
+
+<rect x="187" y="345" width="5" height="7"
+style="fill:blue;stroke:black;stroke-width:2;opacity:0.5" />
+<rect x="198" y="348" width="5" height="7"
+style="fill:blue;stroke:black;stroke-width:2;opacity:0.5" />
+<rect x="209" y="350" width="5" height="7"
+style="fill:blue;stroke:black;stroke-width:2;opacity:0.5" />
+<rect x="185" y="390" width="5" height="7"
+style="fill:black;stroke:black;stroke-width:2;opacity:0.5" />
+<rect x="195" y="390" width="5" height="7"
+style="fill:pink;stroke:black;stroke-width:2;opacity:0.5" />
+		
+  	  
+	  
+  	   
+	   
+	   <path d="M470 200 L500 185 L500 85 L470 100 Z" style="fill:red;stroke:black;stroke-width:2;opacity:5"/>
+	   
+	   <path d="M470 200 L440 185 L440 85 L470 100 Z" style="fill:red;stroke:black;stroke-width:2;opacity:5"/>
+	   
+	   <path d="M470 100 L440 85 L470 70 L500 85 Z" style="fill:red;stroke:black;stroke-width:2;opacity:5"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
